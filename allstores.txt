@@ -3,3 +3,5 @@
 馬士基航運, 12
 地中海航運, 13
 中遠海運集團, 14
+
+heroku run python importdata.py

@@ -24,6 +24,17 @@ def mychart(request, bid=0):
     title = "各分店營收情形"
     return render(request, "mychart.html", locals())
 
+def mychart2(request, bid=0):
+    now = datetime.now()
+    stores = Branch.objects.all()
+
+    if bid == 0:
+        data = StoreIncome.objects.all()
+    else:
+        data = StoreIncome.objects.filter(branch=bid)
+    title = "各分店營收情形"
+    return render(request, "mychart2.html", locals())
+
 def chart(request, year=0, month=0):
     now = datetime.now()
     stores = Branch.objects.all()

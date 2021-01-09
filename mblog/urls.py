@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from mysite.views import homepage ,lotto, showpost, mychart, chart
+from mysite.views import homepage ,lotto, showpost, mychart, chart, mychart2
 
 
 urlpatterns = [
@@ -26,5 +26,6 @@ urlpatterns = [
     path('mychart/<int:bid>/',mychart),
     path('chartbydate/<int:year>/<int:month>/', chart),
     path('chartbydate/<int:year>/', chart),
+    path('mychart2/', mychart2),
     path('', homepage),
 ]

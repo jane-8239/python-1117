@@ -6,16 +6,23 @@
     <h1>薛雅甄的網站</h1>
 {% endblock %}
 {% block content %}
+  <li type="square"><b>相關資訊網站連結：</b>
+  <button class='btn btn-outline-info btn-sm'>
+    <a href="http://www.shippingdigest.tw/news.aspx"><b>航貿週刊</b></a>
+  </button>
+  <button class='btn btn-outline-info btn-sm'>
+    <a href="https://www.twport.com.tw/chinese/News.aspx?n=4E4437C60EA3BF8E&sms=AB20696A04F7E563"><b>臺灣港務股份有限公司</b></a>
+  </button>
         <table class="table table-striped">
-          <tr><th>編號</th><th>主題</th><th>張貼時間</th></tr>
+          <tr><th><center>編號</center></th><th><center>主題</center></th><th><center>張貼時間</center></th></tr>
           {% for post in posts %}
           <tr>
-            <td>{{ post.id }}</td>
+            <td><center>{{ post.id }}</center></td>
             <td>
-              <a href="/post/{{post.slug}}/">{{ post.title }}</a>
+              <center><a href="/post/{{post.slug}}/">{{ post.title }}</a></center>
             </td>
             <td>
-              {{ post.pub_date }}
+            <center>{{ post.pub_date }}</center>
             </td>
           </tr>
           {% endfor %}
